@@ -1,0 +1,26 @@
+Queue
+
+--FIRST IN FIRST OUT
+The first element inserted is the first elemented to be deleted.
+
+Enqueue
+--Add an element to the queue(rear side).
+Overflow--When you try to add an element  to a queue which is full
+
+Dequeue
+--Delete an element from the front side of the queue.
+Underflow--When you try to delete an element from a queue which is empty
+
+Enqueue Algorithm
+
+if queue is full(rear==size)--> Queue Overflow
+else:
+  	add element to queue
+  	q[++rear]=ele;
+
+Dequeue Algorithm
+
+if queue is empty(front==-1)--> Queue Underflow
+else:
+  	delete element from queue
+  	return q[front++];

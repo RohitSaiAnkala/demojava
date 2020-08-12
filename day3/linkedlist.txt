@@ -1,0 +1,64 @@
+ASSUME INITIAL LINKED LIST FOR ALL FUNCTIONS:
+Linked List:  A->B->C->D->NULL
+
+Headnode->points to A	
+
+1.Add Last:
+Let newNode be pointing to newNode;
+	while(head->next!=NULL){
+	head=head->next;
+	}
+	head->next=newNode;
+	newNode->next=NULL;
+
+Modified Linked List: A->B->C->D->E->NULL
+
+2.Add First:
+	newNode->next=head;
+	head=newNode;
+
+Modified Linked List:E->A->B->C->D->NULL
+
+3.Add E after B
+	while(head->val!='B'){
+	head=head->next;
+	}
+	newNode->next=head->next;
+        head->next=newNode;	
+
+Modified Linked List: A->B->E->C->D->NULL
+
+
+Remove
+
+1.Remove First:
+	prev=head;
+	head=head->next;
+	free(prev);
+Modified Linked List:B->C->D->NULL
+
+2.Remove Last:
+	prev--->Previous pointer
+	while(head->next!=NULL){
+	prev=head;
+	head=head->next;
+	}
+	prev->next=NULL;
+	free(head);
+Modified Linked List: A->B->C->NULL
+
+3.Remove B node:
+	prev-->previous pointer
+	while(head->val!='B'){
+	    prev=head;	
+	    head=head->next;	
+	}
+
+	prev->next=head->next;
+	free(head);
+Modified Linked List: A->C->D->NULL
+
+	
+	
+
+

@@ -5,21 +5,54 @@
 <title>Input Elements</title>
 </head>
 <body>
-<form>
-Empno : <input type="text"><br/><br/>
-Ename :<input type="text"><br/><br/>
-Birthdate : <input type="date"><br/><br/>
-Email : <input type="email"><br/><br/>
-City Pref:	<input type="checkbox">Pune<input type="checkbox">Bangalore<input type="checkbox">Hyderabad<br/><br/>	
-Marital Status: <input type="radio" name="gender">Single <input type="radio" name="gender">Married<br/><br/>
-Education:
-<select>
-<option> Tenth</option>
-<option> Inter</option>
-<option> Btech</option>
-</select><br/><br/>
-<input type="submit">
-</form>
+<form action="" method="get">
+<table>
 
+<tr>
+<td>Empno :</td> 
+<td><input type="text" name="empno"></td>
+</tr>
+
+<tr>
+<td>Ename :</td>
+<td><input type="text" name="ename"></td>
+</tr>
+
+<tr>
+<td>Birthdate :</td>
+<td><input type="date" name="dob"></td>
+</tr>
+
+<tr>
+<td>Email :</td>
+<td><input type="email" name="mailid"></td>
+</tr>
+
+<tr>
+<td>City Pref:</td>
+<td><input type="checkbox" name="pune">Pune<input type="checkbox" name="bgl">Bangalore<input type="checkbox" name="hyd">Hyderabad</td>
+</tr>
+
+
+<tr>
+<td>Marital Status:</td>
+<td><input type="radio" name="martial">Single <input type="radio" name="martial">Married</td>
+</tr>
+
+<tr>
+<td>Education:</td>
+<td><select name="options">
+<option value="tenth"> Tenth</option>
+<option value="inter"> Inter</option>
+<option value="btech"> Btech</option>
+</select></td>
+</tr>
+
+<tr>
+<td> <input type="submit"> </td>
+</tr>
+  
+</form>
+</table>
 </body>
 </html>

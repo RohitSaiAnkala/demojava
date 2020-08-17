@@ -7,7 +7,12 @@
 var names=new Array()
 function addToArray(){
 	names.push(document.getElementById("inp").value)
-	document.getElementById("mytr").innerHTML="<td>"+names+"</td>"
+	var s=""
+    for(i=0;i<names.length;i++){
+	s="<tr>"+"<td>"+names[i]+"</td>"+"</tr>"+s
+}
+	s="<tr>"+"<td>"+"Names:"+"</td>"+"</tr>"+s;
+	document.getElementById("mytbl").innerHTML=s;
 }
 
 </script>
@@ -16,12 +21,11 @@ function addToArray(){
 <body>
 Name:<input id="inp" type="text"><br/><br/>
 <input type="button" id="btn" value="Add" onclick="addToArray()"><br/><br/>
-<div id="div1"><table border="1">
+<div id="div1"><table border="1" id="mytbl">
 <tr>
 <td>Names
 </tr>
-<tr id="mytr">
-</tr>
+
 </table>
 </div>
 </body>

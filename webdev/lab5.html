@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Arrays</title>
+<script>
+var names=new Array()
+function addToArray(){
+	names.push(document.getElementById("inp").value)
+	document.getElementById("mytr").innerHTML="<td>"+names+"</td>"
+}
+
+</script>
+</head>
+
+<body>
+Name:<input id="inp" type="text"><br/><br/>
+<input type="button" id="btn" value="Add" onclick="addToArray()"><br/><br/>
+<div id="div1"><table border="1">
+<tr>
+<td>Names
+</tr>
+<tr id="mytr">
+</tr>
+</div>
+</body>
+</html>

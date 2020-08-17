@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Lab1</title>
+<script type="text/javascript">
+function test1(){
+	document.getElementById("td1").innerHTML=document.getElementById("inp1").value;
+	document.getElementById("td2").innerHTML=document.getElementById("inp2").value;
+	document.getElementById("td3").innerHTML=document.getElementById("inp3").value;
+}
+	
+</script>
+</head>
+<body>
+EmpNo:<input type="text" id="inp1"><br/><br/>
+EName:<input type="text" id="inp2"><br/><br/>
+Salary:<input type="text" id="inp3"><br/><br/>
+
+<input id="btn" type="button" value="Add" onclick="test1()"><br/><br/>
+<div id="div1"><table border="1">
+<tr>
+<td>EmpNo</td>
+<td>EName</td>
+<td>Salary</td>
+</tr>
+<tr>
+<td id="td1"></td>
+<td id="td2"></td>
+<td id="td3"></td>
+
+</tr>
+</table>
+</div>
+</body>
+</html>

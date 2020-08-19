@@ -1,0 +1,38 @@
+create table persons(personid number(3) primary key,
+		     personname varchar(15),
+		     city varchar(15),
+		     state varchar(15),
+		     bdate date,
+		     aadharnumber number(12),
+		      pannumber number(10));
+
+insert into persons values(1,'rohit','vijayawada','ap','17-AUG-1999',12345,123456);
+insert into persons values(2,'sai','hyderabad','telangana','15-AUG-1998',567789,14756);
+insert into persons values(3,'gupta','pune','maharastra','17-JULY-1975',57189,45564);
+insert into persons values(4,'vinay','khammam','ap','27-JAN-1998',18947,87649);
+insert into persons values(5,'lokesh','ahmedabad','gujarat','11-JUN-1997',84791,649451);
+insert into persons values(6,'shankar','hyderabad','telangana','10-SEP-1987',98715,445176);
+insert into persons values(7,'hari','vijayawada','ap','18-DEC-1999',34512,345612);
+insert into persons values(8,'mohan','vijayawada','ap','21-SEP-1999',452132,561245);
+insert into persons values(9,'saddam','guntur','ap','27-OCT-1997',945132,81245);
+
+select personid as id,personname as name, city,state,bdate as DOB,aadharnumber as aadhar, pannumber as pan from persons;
+
+update persons 
+set personname='baseshankar',city='hyd',state='telangana',
+bdate='10-AUG-1988',aadharnumber=54321,pannumber=12345 
+where personid=6;
+
+select personid as id,personname as name, city,state,bdate as DOB,aadharnumber as aadhar, pannumber as pan from persons;
+
+update persons set state='AndhraPradesh' where city='vijayawada';
+
+select personid as id,personname as name, city,state,bdate as DOB,aadharnumber as aadhar, pannumber as pan from persons;
+
+delete from persons where personid=9;
+
+select personid as id,personname as name, city,state,bdate as DOB,aadharnumber as aadhar, pannumber as pan from persons;
+
+delete from persons where city='vijayawada';
+
+select personid as id,personname as name, city,state,bdate as DOB,aadharnumber as aadhar, pannumber as pan from persons;

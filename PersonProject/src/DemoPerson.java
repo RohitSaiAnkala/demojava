@@ -5,7 +5,6 @@ import com.impl.PersonImpl;
 import com.pojo.Person;
 
 public class DemoPerson {
-
 	public static void main(String[] args) {
 	Scanner sc=new Scanner(System.in);
 	int choice,pId,flag=0;
@@ -34,13 +33,22 @@ public class DemoPerson {
 			 System.out.print("Enter name:");
 			 name=sc.next();
 			p= person.updatePerson(pId, persons, name);
-			 System.out.println(p);
+			if(p.getpId()==0){
+				System.out.println(" Person  not found for given id");
+			}
+			else
+			System.out.println(p);
 			 break;
 		case 3:
 			System.out.print("Enter id:");
 			pId=sc.nextInt();
 			p=person.findById(pId, persons);
+			if(p.getpId()==0){
+				System.out.println("Person not found for given id");
+			}
+			else
 			System.out.println(p);
+		
 			break;
 		case 4:
 			System.out.print("Enter id:");
@@ -59,4 +67,3 @@ public class DemoPerson {
 	}
 	}
 }
-

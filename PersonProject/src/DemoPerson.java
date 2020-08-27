@@ -13,6 +13,7 @@ public class DemoPerson {
 	
 	PersonImpl person=new PersonImpl();
 	List<Person>persons=person.getPersons();
+	Person p;
 	while(true){
 		System.out.println("MENU\n1.add Data\n2.update person\n3.find person\n4.Remove person\n5.Display all\n6.exit");
 		System.out.print("Enter your choice:");
@@ -23,24 +24,26 @@ public class DemoPerson {
 			  pId=sc.nextInt();
 			  System.out.print("Enter name:");
 			  name=sc.next();
-			  Person p=new Person(pId,name);
-			  person.addPerson(persons, p);
+			  p=new Person(pId,name);
+			 persons=person.addPerson(persons, p);
+			 person.displayPersons(persons);
 			  break;
 		case 2:
-			System.out.println("Enter id:");
+			System.out.print("Enter id:");
 			pId=sc.nextInt();
-			 System.out.println("Enter name:");
+			 System.out.print("Enter name:");
 			 name=sc.next();
-			 person.updatePerson(pId, persons, name);
+			p= person.updatePerson(pId, persons, name);
+			 System.out.println(p);
 			 break;
 		case 3:
-			System.out.println("Enter id:");
+			System.out.print("Enter id:");
 			pId=sc.nextInt();
-			Person p1=person.findById(pId, persons);
-			System.out.println(p1);
+			p=person.findById(pId, persons);
+			System.out.println(p);
 			break;
 		case 4:
-			System.out.println("Enter id:");
+			System.out.printa("Enter id:");
 			pId=sc.nextInt();
 			person.removePerson(pId, persons);
 			break;
@@ -56,3 +59,4 @@ public class DemoPerson {
 	}
 	}
 }
+

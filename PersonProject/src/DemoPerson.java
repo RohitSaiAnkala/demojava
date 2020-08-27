@@ -43,7 +43,7 @@ public class DemoPerson {
 			System.out.println(p);
 			break;
 		case 4:
-			System.out.printa("Enter id:");
+			System.out.print("Enter id:");
 			pId=sc.nextInt();
 			person.removePerson(pId, persons);
 			break;

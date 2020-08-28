@@ -1,3 +1,4 @@
+
 package com.impl;
 
 import java.io.FileInputStream;
@@ -21,9 +22,10 @@ public class EmpIOImpl implements EmpIO {
 	public void addToFile(List<Employee> employees) {
 		try(FileOutputStream fo=new FileOutputStream("mydata.txt");
 				ObjectOutputStream oo=new ObjectOutputStream(fo);){
-				for(Employee emp: employees){
-			      oo.writeObject(emp);
-		} 
+			oo.writeObject(employees);
+//				for(Employee emp: employees){
+//			      oo.writeObject(emp);
+//		} 
 		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -41,13 +43,10 @@ public class EmpIOImpl implements EmpIO {
 			if(fi.available()==0)
 				return l;
 			ObjectInputStream oi=new ObjectInputStream(fi);
-			while(fi.available()!=0){
+//			while(fi.available()!=0){
 			Object o=oi.readObject();
-			//System.out.println("o:"+o);
-			Employee data=(Employee)o;
-			//System.out.println("data:"+data);
-			l.add(data);
-			}
+			l=(List)o;
+			//l.add((Employee) data);
 			} catch (FileNotFoundException|ClassNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {

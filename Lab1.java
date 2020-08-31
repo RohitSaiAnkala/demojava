@@ -41,9 +41,7 @@ public class Lab1 {
 		helper.printdemo(s1, s2);
 		System.out.println("in main after function call " + s1 +",  " + s2);
 		
-		
-	//	String s = helper.m1();
-	//	System.out.println(" s = " + s);
+	
 	}
 
 }

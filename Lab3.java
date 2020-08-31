@@ -39,9 +39,9 @@ public static void main(String[] args) {
 		}
 		for(int i=0;i<5;i++) {
 			System.out.println("Details of Employee "+(i+1));
-			System.out.println("EMPNO:"+list[i].getEmpno());
-			System.out.println("EMPNAME:"+list[i].getEname());
-			System.out.println("EMPSAL:"+list[i].getSalary());
+			System.out.println("empno:"+list[i].getEmpno());
+			System.out.println("empname:"+list[i].getEname());
+			System.out.println("empsal:"+list[i].getSalary());
 		}
 	}
 }
